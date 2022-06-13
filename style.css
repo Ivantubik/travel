@@ -11,9 +11,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 .showcase {
     position: absolute;
-    right: 0;
+    /* right: 0; */
     width: 100%;
     min-height: 100vh;
     padding: 100px;
@@ -22,12 +26,12 @@
     align-items: center;
     background: #111;
     color: #fff;
-    /* z-index: 6; */
+    z-index: 6;
     transition: 1s;
 }
 
 .showcase.active {
-    right: 300px;
+    /* right: 300px; */
 
 }
 
@@ -57,7 +61,6 @@
     background-size: 30px;
     background-position: center;
     cursor: pointer;
-    z-index: 999;
 }
 
 .toggle.active {
@@ -90,7 +93,7 @@
 
 .text {
     position: relative;
-    /* z-index: 10; */
+    z-index: 10;
 }
 
 .text h2 {
@@ -134,7 +137,7 @@ text p {
 .social {
     position: absolute;
     bottom: 20px;
-    /* z-index: 10; */
+    z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,15 +162,20 @@ text p {
 .menu {
     position: absolute;
     top: 0;
+    /* right: 0; */
     right: -300px;
     width: 300px;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-z-index: 40;
-background-color: rgb(154, 149, 158);
-    
+    background: #ffffff;
+    z-index: 999;
+    transition: 1s;
+}
+
+.menu.active {
+    right: 0;
 }
 
 .menu ul {
@@ -188,9 +196,7 @@ background-color: rgb(154, 149, 158);
     text-transform: lowercase;
     font-size: 16px;
 }
-.active {
-right: 0;
-}
+
 
 @media (max-width: 798px) {
     .showcase, .showcase header {
